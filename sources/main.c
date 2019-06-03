@@ -19,9 +19,31 @@ int is_input_is_valid_integer(int ac, char **av)
     return (size);
 }
 
+void fill_maze(char *maze, int size)
+{
+  int  i;
+  
+  i = 0;
+  if (!maze)
+    return ;
+  while (maze[i] && i < (size + 1) * size)
+  {
+    if (i && !(i % (size + 1)))
+      maze[i] = '\n';
+    maze[i] = '#';
+    i++;
+  }
+}
+
 void    generate_maze(int size)
 {
-
+  char *maze;
+  
+  if (!(maze = malloc(sizeof(char) * (size + 1) * size)))
+    return ;
+  fill_maze(maze, size);
+  create_random_path(maze, size);
+  add_random_dead_ends(maze, size);
 }
 
 int main(int ac, char **av)
