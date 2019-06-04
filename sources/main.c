@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "../libft/includes/libft.h"
 
 /*
@@ -19,31 +20,35 @@ int is_input_is_valid_integer(int ac, char **av)
     return (size);
 }
 
-void fill_maze(char *maze, int size)
+char *fill_maze(int size)
 {
+  char *maze;
+  int   string_length;
   int  i;
   
+  string_length = (size + 1) * size;
+  if (!(maze = malloc(sizeof(char) * (string_length + 1))))
+    return (0);
   i = 0;
-  if (!maze)
-    return ;
-  while (maze[i] && i < (size + 1) * size)
+  while (i < string_length)
   {
-    if (i && !(i % (size + 1)))
-      maze[i] = '\n';
-    maze[i] = '#';
-    i++;
+    maze[i++] = '#';
+    if (!((i + 1) % (size + 1)))
+      maze[i++] = '\n';
   }
+  maze[i] = '\0';
+  return (maze);
 }
 
 void    generate_maze(int size)
 {
   char *maze;
   
-  if (!(maze = malloc(sizeof(char) * (size + 1) * size)))
-    return ;
-  fill_maze(maze, size);
-  create_random_path(maze, size);
-  add_random_dead_ends(maze, size);
+  printf("size %d\n", size);
+  maze = fill_maze(size);
+  printf("%s\n", maze);
+  //create_random_path(maze, size);
+  //add_random_dead_ends(maze, size);
 }
 
 int main(int ac, char **av)
