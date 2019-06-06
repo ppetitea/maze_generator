@@ -5,5 +5,6 @@
 # include "./str.h"
 # include "./nbr.h"
 # include "./types.h"
+# include "./maths.h"
 
 #endif
