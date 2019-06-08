@@ -16,6 +16,18 @@ t_pos2i    *new_pos2i(int x, int y)
     return (pos);
 }
 
+t_pos2i    *pos2i(t_pos2i *pos, int x, int y)
+{
+    if (pos)
+    {
+        pos->x = x;
+        pos->y = y;
+        return (pos);
+    }
+    else
+        return (new_pos2i(x, y));
+}
+
 t_pos2i    *pos2i_add(t_pos2i *pos1, t_pos2i *pos2)
 {
     t_pos2i *pos;

@@ -12,6 +12,7 @@ typedef struct   s_pos2i
 }               t_pos2i;
 
 t_pos2i    *new_pos2i(int x, int y);
+t_pos2i    *pos2i(t_pos2i *pos, int x, int y);
 
 typedef struct   s_pos3i
 {
@@ -69,5 +70,6 @@ t_pos3d    *new_pos3d(double x, double y, double z);
 ** Random section
 */
 
-int     random_in_range(int range);
+int     random_in_range(unsigned int set_random, int range);
+
 #endif

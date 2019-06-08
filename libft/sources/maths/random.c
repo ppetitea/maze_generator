@@ -1,10 +1,9 @@
 #include <stdlib.h>
 #include <time.h>
 
-int     random_in_range(int range)
+int     random_in_range(unsigned int set_random, int range)
 {
-  time_t t;
-
-  srand((unsigned) time(&t));
+  set_random += (unsigned int)time(NULL);
+  srand(set_random);
   return (rand() % range);
 }
