@@ -4,6 +4,7 @@ SRC =	./sources/str/ft_strlen.c\
 		./sources/str/ft_isspace.c\
 		./sources/str/ft_isnumber.c\
 		./sources/nbr/ft_atoi.c\
+		./sources/nbr/array.c\
 		./sources/io/ft_putstr.c\
 		./sources/maths/positions.c\
 		./sources/maths/random.c\
@@ -15,6 +16,7 @@ HEADERS =	./includes/libft.h\
 			./includes/maths.h\
 			./includes/str.h\
 			./includes/nbr.h\
+			./includes/move.h\
 			./includes/io.h
 
 INCLUDES = $(HEADERS)

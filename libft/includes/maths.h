@@ -11,8 +11,9 @@ typedef struct   s_pos2i
     int     y;
 }               t_pos2i;
 
-t_pos2i    *new_pos2i(int x, int y);
-t_pos2i    *pos2i(t_pos2i *pos, int x, int y);
+t_pos2i     *new_pos2i(int x, int y);
+t_pos2i     pos2i(int x, int y);
+void        *pos2i_add(t_pos2i *pos1, t_pos2i *pos2);
 
 typedef struct   s_pos3i
 {
@@ -55,7 +56,6 @@ typedef struct   s_pos2d
 }               t_pos2d;
 
 t_pos2d    *new_pos2d(double x, double y);
-t_pos2i    *pos2i_add(t_pos2i *pos1, t_pos2i *pos2);
 
 typedef struct   s_pos3d
 {

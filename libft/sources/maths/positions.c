@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include "../../includes/maths.h"
+#include "../../includes/io.h"
 
 /*
 ** integer positions
@@ -16,29 +17,33 @@ t_pos2i    *new_pos2i(int x, int y)
     return (pos);
 }
 
-t_pos2i    *pos2i(t_pos2i *pos, int x, int y)
+// t_pos2i    *pos2i(t_pos2i *pos, int x, int y)
+// {
+//     if (pos)
+//     {
+//         pos->x = x;
+//         pos->y = y;
+//         return (pos);
+//     }
+//     else
+//         return (new_pos2i(x, y));
+// }
+
+t_pos2i    pos2i(int x, int y)
 {
-    if (pos)
-    {
-        pos->x = x;
-        pos->y = y;
-        return (pos);
-    }
-    else
-        return (new_pos2i(x, y));
+    t_pos2i pos;
+    pos.x = x;
+    pos.y = y;
+    return (pos);
 }
 
-t_pos2i    *pos2i_add(t_pos2i *pos1, t_pos2i *pos2)
+void    *pos2i_add(t_pos2i *pos1, t_pos2i *pos2)
 {
-    t_pos2i *pos;
-
     if (!pos1 || !pos2)
         return (NULL);
-    if (!(pos = malloc(sizeof(t_pos2i))))
-        return (NULL);
-    pos->x = pos1->x + pos2->x;
-    pos->y = pos1->y + pos2->y;
-    return (pos);
+    pos1->x += pos2->x;
+    pos1->y += pos2->y;
+    return (pos1);
 }
 
 int         are_pos2i_equal(t_pos2i *pos1, t_pos2i *pos2)
