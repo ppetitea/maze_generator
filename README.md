@@ -5,14 +5,14 @@ Maze generator for wolf3d 42 project's
    Maze generator take size in params :
    Exemple : ./generate_maze 10
 
-   #X XXXXXXXX
-   #X  X   X X
-   XX  X X  X
-   X X     XX
-   X  XXXX  X
-   XX     X X
-   X  XX X  X
-   XX X  X XX
-   X   X    X
-   XXXXXXXX X
+   X XXXXXXXX<br/>
+   X  X   X X<br/>
+   XX  X X  X<br/>
+   X X     XX<br/>
+   X  XXXX  X<br/>
+   XX     X X<br/>
+   X  XX X  X<br/>
+   XX X  X XX<br/>
+   X   X    X<br/>
+   XXXXXXXX X<br/>
 
