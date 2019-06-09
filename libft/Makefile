@@ -6,6 +6,7 @@ SRC =	./sources/str/ft_strlen.c\
 		./sources/nbr/ft_atoi.c\
 		./sources/nbr/array.c\
 		./sources/io/ft_putstr.c\
+		./sources/io/ft_error.c\
 		./sources/maths/positions.c\
 		./sources/maths/random.c\
 

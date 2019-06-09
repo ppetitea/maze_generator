@@ -4,5 +4,6 @@
 # include "./str.h"
 
 void    ft_putstr(char *string);
+void		*throw_error(char *message);
 
 #endif
