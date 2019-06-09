@@ -4,7 +4,18 @@
 
 /*
 *   Maze generator take size in params :
-*   Exemple : "./generate_maze 42" will generate maze with size 42 by 42
+*   Exemple : ./generate_maze 10
+*
+*   # ########
+*   #    #   #
+*   ####  ## #
+*   #   #  # #
+*   # #   #  #
+*   # ####  ##
+*   #     #  #
+*   ### ## # #
+*   #        #
+*   ######## #
 */
 
 int is_input_is_valid_integer(int ac, char **av)
@@ -82,7 +93,7 @@ int   find_next_move(t_pos2i *path, char *maze, int size, unsigned int set_rando
   path[1].x = path[0].x + next[move_nbr].x;
   path[1].y = path[0].y + next[move_nbr].y;
   return (1);
-} 
+}
 
 int    create_paths(char *maze, int size)
 {
