@@ -2,6 +2,18 @@
 # define MATHS_H
 
 /*
+** sizes
+*/
+
+typedef struct   s_size
+{
+    int     x;
+    int     y;
+}               t_size;
+
+t_size  size(int x, int y);
+
+/*
 ** integer positions
 */
 
