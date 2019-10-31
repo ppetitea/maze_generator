@@ -1,7 +1,10 @@
 .PHONY: libft all clean fclean re
 
 # C FILES
-SRC =	./sources/main.c
+SRC =	./sources/generate_maze.c\
+		./sources/dig_maze.c\
+		./sources/show_maze.c\
+		./sources/add_end_spawn_positions.c
 
 # Objects files
 OBJ = $(SRC:.c=.o)
@@ -24,7 +27,7 @@ NAME = generate_maze
 CFLAGS = -Wall -Werror -Wextra
 
 # Commande de compilation
-CC = gcc
+CC = gcc -g
 
 all: libft $(NAME)
 

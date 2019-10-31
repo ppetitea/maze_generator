@@ -2,8 +2,6 @@
 # define TYPES_H
 
 # include <stdint.h>
-# define TRUE	1
-# define FALSE	0
 
 typedef uint8_t		t_u8;
 typedef int8_t		t_i8;
@@ -16,10 +14,9 @@ typedef int64_t		t_i64;
 
 typedef uint8_t		t_bool;
 
-typedef enum		e_result
-{
-	ERROR,
-	OK
-}					t_result;
+#define TRUE	1
+#define FALSE	0
+#define OK		1
+#define ERROR	0
 
 #endif

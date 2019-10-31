@@ -10,6 +10,7 @@ SRC =	./sources/str/ft_strlen.c\
 		./sources/io/ft_putstr.c\
 		./sources/io/ft_error.c\
 		./sources/maths/positions.c\
+		./sources/maths/vectors.c\
 		./sources/maths/size.c\
 		./sources/maths/random.c\
 

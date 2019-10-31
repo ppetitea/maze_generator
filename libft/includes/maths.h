@@ -11,6 +11,16 @@ typedef struct   s_size
     int     y;
 }               t_size;
 
+/*
+** range
+*/
+
+typedef struct   s_range
+{
+    int     min;
+    int     max;
+}               t_range;
+
 t_size  size(int x, int y);
 
 /*
@@ -79,9 +89,22 @@ typedef struct   s_pos3d
 t_pos3d    *new_pos3d(double x, double y, double z);
 
 /*
+** integer movements
+*/
+
+typedef struct   s_vec2i
+{
+    int     x;
+    int     y;
+}               t_vec2i;
+
+t_vec2i     vec2i(int x, int y);
+
+/*
 ** Random section
 */
 
 int     random_in_range(unsigned int set_random, int range);
+void    sort_random(t_vec2i *array, int size, int set_random);
 
 #endif
