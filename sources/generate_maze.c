@@ -6,7 +6,7 @@
 /*   By: pp <pp@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/30 23:44:22 by pp                #+#    #+#             */
-/*   Updated: 2019/10/31 20:05:19 by pp               ###   ########.fr       */
+/*   Updated: 2019/11/01 18:22:29 by pp               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int    generate_maze(int size)
 {
     t_maze *maze;
 
-    if (!is_belong_i(size, 6, 100))
+    if (!is_belong_i(size, 6, 10000))
         return (ERROR);
     maze = new_maze(size, 'a', ' ', 'E');
     fill_maze(maze);
@@ -75,8 +75,8 @@ int main(int ac, char **av)
     int size;
 
     size = ft_atoi(av[1]);
-    if (size <= 5 || size > 100)
-        ft_putstr("usage: ./generate_maze size\n\tsize: [6 - 100]");
+    if (size <= 5 || size > 10000)
+        ft_putstr("usage: ./generate_maze size\n\tsize: [6 - 10000]");
     else
         generate_maze(size);
     return (0);
